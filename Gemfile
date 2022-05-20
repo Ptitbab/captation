@@ -6,7 +6,7 @@ ruby '2.7.4'
 
 #others
 gem 'faker'
-
+gem 'letter_opener'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
