@@ -14,12 +14,12 @@ ActiveRecord::Schema.define(version: 2022_05_19_132211) do
 
   create_table "attendances", force: :cascade do |t|
     t.string "stripe_customer_id"
-    t.integer "user_id"
+    t.integer "attendee_id"
     t.integer "event_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["attendee_id"], name: "index_attendances_on_attendee_id"
     t.index ["event_id"], name: "index_attendances_on_event_id"
-    t.index ["user_id"], name: "index_attendances_on_user_id"
   end
 
   create_table "events", force: :cascade do |t|
@@ -29,8 +29,10 @@ ActiveRecord::Schema.define(version: 2022_05_19_132211) do
     t.text "description"
     t.integer "price"
     t.string "location"
+    t.integer "admin_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["admin_id"], name: "index_events_on_admin_id"
   end
 
   create_table "users", force: :cascade do |t|
