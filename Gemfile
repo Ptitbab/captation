@@ -8,6 +8,7 @@ ruby '2.7.4'
 gem 'faker'
 gem 'letter_opener'
 gem 'dotenv-rails'
+gem 'devise'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.8'
